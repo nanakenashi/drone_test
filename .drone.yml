@@ -4,6 +4,6 @@ pipeline:
     bucket: nanakenashi-drone-test
     acl: public-read
     region: ap-northeast-1
-    source: public/index.html
+    source: public/error.html
     strip_prefix: public/
     target: /deploy
