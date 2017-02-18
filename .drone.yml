@@ -1,9 +1,14 @@
 pipeline:
+  build:
+    image: golang
+    commands:
+      - touch public/test.html
+      - echo 'hoge' >> public/test.html
   s3:
     image: plugins/s3
     bucket: nanakenashi-drone-test
     acl: public-read
     region: ap-northeast-1
-    source: public/error.html
+    source: public/*
     strip_prefix: public/
     target: /deploy
