@@ -1,4 +1,11 @@
 pipeline:
+  build:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
+
   s3:
     image: plugins/s3
     bucket: my-bucket-name
