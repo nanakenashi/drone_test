@@ -1,12 +1,10 @@
 pipeline:
-  build:
-    image: golang
-    commands:
-      - echo 'hoge'
-
   s3:
     image: plugins/s3
     bucket: my-bucket-name
+    acl: public-read
+    region: ap-northeast-1
     source: public/index.html
     strip_prefix: public/
     target: /deploy
+    yaml_verified: true
