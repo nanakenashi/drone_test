@@ -1,7 +1,7 @@
 pipeline:
   s3:
     image: plugins/s3
-    bucket: my-bucket-name
+    bucket: nanakenashi-drone-test
     acl: public-read
     region: ap-northeast-1
     source: public/index.html
