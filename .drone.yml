@@ -1,0 +1,7 @@
+pipeline:
+  s3:
+    image: plugins/s3
+    bucket: my-bucket-name
+    source: public/index.html
+    strip_prefix: public/
+    target: /deploy
