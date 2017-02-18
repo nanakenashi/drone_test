@@ -7,4 +7,3 @@ pipeline:
     source: public/index.html
     strip_prefix: public/
     target: /deploy
-    yaml_verified: true
