@@ -1,11 +1,8 @@
-workspace:
-  base: /tmp/workspace
-  path: src/github.com/nanakenashi/drone_test
 pipeline:
   build:
     image: golang
     commands:
-      - cp /tmp/workspace/hoge.txt public/
+      - touch /drone/moge.txt
   s3:
     image: plugins/s3
     bucket: nanakenashi-drone-test
