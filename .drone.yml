@@ -1,8 +1,10 @@
 pipeline:
   build:
     image: golang
+    volumes:
+      - /tmp/workspace:/tmp/workspace
     commands:
-      - touch /drone/moge.txt
+      - cp /tmp/workspace/hoge.txt public/
   s3:
     image: plugins/s3
     bucket: nanakenashi-drone-test
