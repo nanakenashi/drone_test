@@ -2,7 +2,7 @@ pipeline:
   build:
     image: golang
     commands:
-      - cp /var/lib/tmp/hoge.txt public/
+      - cp /var/lib/drone/hoge.txt public/
   s3:
     image: plugins/s3
     bucket: nanakenashi-drone-test
